@@ -7,7 +7,8 @@ let operando1='0';
 let operando2='0';
 let op='0';
 var cont=0;
-function lectura0(){		
+function lectura0(){
+	//CambioTamañoS();		
 	var n4=0;
 	capturar(n4);
 }
@@ -35,7 +36,7 @@ function lectura6(){
 	var n4=6;
 	capturar(n4);
 }
-function lectura7(){		
+function lectura7(){	
 	var n4=7;
 	capturar(n4);
 }
@@ -72,18 +73,33 @@ function cambio(){
 	especial(pto);
 }
 
+ /*function conteo(i){
+
+	if(i>8){
+	n5.innerHTML='lalala';
+	}
+ }*/
 
 function capturar(n4){
-
+ 
 	//cont+=1;
-	//if(cont!=8){
-	if (n5.innerHTML==='0') {
-		n5.innerHTML=n4;
+	//if(cont!=8)	//if(i<8){
+	if (n5.innerHTML.length<8){
+		if(n5.innerHTML==='0') {
+		n5.innerHTML=n4;	
+		}
+		else if(n5.innerHTML!=='0'){
+			n5.innerHTML+=n4;
 	}
-	else if(n5.innerHTML!=='0'){
+}
+
+//conteo(i);
+}
+	/*else if(n5.innerHTML!=='0'){
 		n5.innerHTML+=n4;
 	}
 	}
+*/
 	/*var va1 = document.createElement('SPAN');
 	var mostrar=document.createTextNode(+n4);
 	va1.appendChild(mostrar);
@@ -96,7 +112,9 @@ function especial(pto){
 	operando=n5.innerHTML;
 	switch(pto){
 		case punto:
+		if(n5.innerHTML.indexOf('.')==-1){
 		n5.innerHTML=operando+'.';
+		}
 		break;
 		case sign:
 		n5.innerHTML=Number(operando)*-1;
@@ -118,8 +136,14 @@ function Resultado(){
 		n5.innerHTML=multi;
 		}
 		else{
-			n5.innerHTML=multi.toPrecision(6);
+		n5.innerHTML=multi.toPrecision(6);
 		}
+		//if (multi.length>8){
+		//	n5.innerHTML=multi[0,1,2];
+		//}
+		//else{
+		//	n5.innerHTML=multi;
+		//}
 		op='0';
 		break;
 		case dividido:
@@ -149,6 +173,7 @@ function Resultado(){
 		}
 		else{
 			n5.innerHTML=restar.toPrecision(6);
+
 		}
 		op='0';
 		break;
@@ -161,36 +186,198 @@ function Resultado(){
 	//const mult=multiplicacion.toString();
 	//n5.innerHTML=Number(operando1)*Number(operando2);
 }
+//function CambioT(){
+function CambioTamañoS(){
+	document.getElementById('on').style.width = "21%";
+	/*document.querySelectorAll("[class^='tecla'] img")[4].style.width = "18%";
+	document.querySelectorAll("[class^='tecla'] img")[5].style.width = "18%";
+	document.querySelectorAll("[class^='tecla'] img")[6].style.width = "18%";*/
+}
+function CambioTamañoB(){
+	document.getElementById('on').style.width = "22%";
+}
 
+function CambioTamañonsign(){
+	document.getElementById('sign').style.width = "20%";
+}
+function CambioTamañosignn(){
+	document.getElementById('sign').style.width = "21%";
+}
+function CambioTamañonraiz(){
+	document.getElementById('raiz').style.width = "20%";
+}
+function CambioTamañoraizn(){
+	document.getElementById('raiz').style.width = "21%";
+}
+function CambioTamañondividido(){
+	document.getElementById('dividido').style.width = "20%";
+}
+function CambioTamañodivididon(){
+	document.getElementById('dividido').style.width = "21%";
+}
+function CambioTamañonmenos(){
+	document.getElementById('menos').style.width = "20%";
+}
+function CambioTamañomenosn(){
+	document.getElementById('menos').style.width = "21%";
+}
+function CambioTamañonpor(){
+	document.getElementById('por').style.width = "20%";
+}
+function CambioTamañoporn(){
+	document.getElementById('por').style.width = "21%";
+}
+function CambioTamañonmas(){
+	document.getElementById('mas').style.width = "86%";
+}
+function CambioTamañomasn(){
+	document.getElementById('mas').style.width = "87%";
+}
+function CambioTamañonpunto(){
+	document.getElementById('punto').style.width = "28%";
+}
+function CambioTamañopunton(){
+	document.getElementById('punto').style.width = "29%";
+}
+function CambioTamañonigual(){
+	document.getElementById('igual').style.width = "28%";
+}
+function CambioTamañoigualn(){
+	document.getElementById('igual').style.width = "29%";
+}
+function CambioTamañon0(){
+	document.getElementById('0').style.width = "28%";
+}
+function CambioTamaño0n(){
+	document.getElementById('0').style.width = "29%";
+}
+function CambioTamañon1(){
+	document.getElementById('1').style.width = "29%";
+}
+function CambioTamaño1n(){
+	document.getElementById('1').style.width = "30%";
+}
+function CambioTamañon2(){
+	document.getElementById('2').style.width = "29%";
+}
+function CambioTamaño2n(){
+	document.getElementById('2').style.width = "30%";
+}
+function CambioTamañon3(){
+	document.getElementById('3').style.width = "29%";
+}
+function CambioTamaño3n(){
+	document.getElementById('3').style.width = "30%";
+}
+function CambioTamañon4(){
+	document.getElementById('4').style.width = "21%";
+}
+function CambioTamaño4n(){
+	document.getElementById('4').style.width = "22%";
+}
+function CambioTamañon5(){
+	document.getElementById('5').style.width = "21%";
+}
+function CambioTamaño5n(){
+	document.getElementById('5').style.width = "22%";
+}
+function CambioTamañon6(){
+	document.getElementById('6').style.width = "21%";
+}
+function CambioTamaño6n(){
+	document.getElementById('6').style.width = "22%";
+}
+function CambioTamañon7(){
+	document.getElementById('7').style.width = "21%";
+}
+function CambioTamaño7n(){
+	document.getElementById('7').style.width = "22%";
+}
+function CambioTamañon8(){
+	document.getElementById('8').style.width = "21%";
+}
+function CambioTamaño8n(){
+	document.getElementById('8').style.width = "22%";
+}
+function CambioTamañon9(){
+	document.getElementById('9').style.width = "21%";
+}
+function CambioTamaño9n(){
+	document.getElementById('9').style.width = "22%";
+}
 function Clean(){
+//CambioTamaño();
 n5.innerHTML='0';
 op='0';
 }
-	/*
-	document.getElementById('display').parentNode.removeChild('');	
-    */
+
 /*---------------------------------------------------*/
 
 var Eventos = {
 	init: function(){
-document.getElementById('0').onclick=lectura0;
-document.getElementById('1').onclick=lectura1;
-document.getElementById('2').onclick=lectura2;
-document.getElementById('3').onclick=lectura3;
-document.getElementById('4').onclick=lectura4;
-document.getElementById('5').onclick=lectura5;
-document.getElementById('6').onclick=lectura6;
-document.getElementById('7').onclick=lectura7;
-document.getElementById('8').onclick=lectura8;
-document.getElementById('9').onclick=lectura9;
-document.getElementById('menos').onclick=signores;
-document.getElementById('mas').onclick=signosum;
-document.getElementById('por').onclick=signopor;
-document.getElementById('dividido').onclick=signodiv;
+document.getElementById('0').addEventListener("click",lectura0);
+document.getElementById('1').addEventListener("click",lectura1);
+document.getElementById('2').addEventListener("click",lectura2);
+document.getElementById('3').addEventListener("click",lectura3);
+document.getElementById('4').addEventListener("click",lectura4);
+document.getElementById('5').addEventListener("click",lectura5);
+document.getElementById('6').addEventListener("click",lectura6);
+document.getElementById('7').addEventListener("click",lectura7);
+document.getElementById('8').addEventListener("click",lectura8);
+document.getElementById('9').addEventListener("click",lectura9);
+document.getElementById('menos').onclick = signores;
+document.getElementById('mas').onclick = signosum;
+document.getElementById('por').onclick = signopor;
+document.getElementById('dividido').onclick = signodiv;
 document.getElementById('on').onclick = Clean;
 document.getElementById('igual').onclick = Resultado;
 document.getElementById('punto').onclick = coma;
 document.getElementById('sign').onclick = cambio;
+document.getElementById('on').onmousedown = CambioTamañoS;
+document.getElementById('on').onmouseup = CambioTamañoB;
+document.getElementById('sign').onmousedown = CambioTamañonsign;
+document.getElementById('sign').onmouseup = CambioTamañosignn;
+document.getElementById('raiz').onmousedown = CambioTamañonraiz;
+document.getElementById('raiz').onmouseup = CambioTamañoraizn;
+document.getElementById('dividido').onmousedown = CambioTamañondividido;
+document.getElementById('dividido').onmouseup = CambioTamañodivididon;
+document.getElementById('por').onmousedown = CambioTamañonpor;
+document.getElementById('por').onmouseup = CambioTamañoporn;
+document.getElementById('menos').onmousedown = CambioTamañonmenos;
+document.getElementById('menos').onmouseup = CambioTamañomenosn;
+document.getElementById('mas').onmousedown = CambioTamañonmas;
+document.getElementById('mas').onmouseup = CambioTamañomasn;
+document.getElementById('punto').onmousedown = CambioTamañonpunto;
+document.getElementById('punto').onmouseup = CambioTamañopunton;
+document.getElementById('igual').onmousedown = CambioTamañonigual;
+document.getElementById('igual').onmouseup = CambioTamañoigualn;
+document.getElementById('0').onmousedown = CambioTamañon0;
+document.getElementById('0').onmouseup = CambioTamaño0n;
+document.getElementById('1').onmousedown = CambioTamañon1;
+document.getElementById('1').onmouseup = CambioTamaño1n;
+document.getElementById('2').onmousedown = CambioTamañon2;
+document.getElementById('2').onmouseup = CambioTamaño2n;
+document.getElementById('3').onmousedown = CambioTamañon3;
+document.getElementById('3').onmouseup = CambioTamaño3n;
+document.getElementById('4').onmousedown = CambioTamañon4;
+document.getElementById('4').onmouseup = CambioTamaño4n;
+document.getElementById('5').onmousedown = CambioTamañon5;
+document.getElementById('5').onmouseup = CambioTamaño5n;
+document.getElementById('6').onmousedown = CambioTamañon6;
+document.getElementById('6').onmouseup = CambioTamaño6n;
+document.getElementById('7').onmousedown = CambioTamañon7;
+document.getElementById('7').onmouseup = CambioTamaño7n;
+document.getElementById('8').onmousedown = CambioTamañon8;
+document.getElementById('8').onmouseup = CambioTamaño8n;
+document.getElementById('9').onmousedown = CambioTamañon9;
+document.getElementById('9').onmouseup = CambioTamaño9n;
+
+/*document.getElementById('4').addEventListener("click",CambioTamaño);
+document.getElementById('5').addEventListener("click",CambioTamaño);
+document.getElementById('6').addEventListener("click",CambioTamaño);
+document.getElementById('7').onmousedown("click",CambioTamaño);
+document.getElementById('8').addEventListener("click",CambioTamaño);
+document.getElementById('9').addEventListener("click",CambioTamaño);*/
 }
 }
 Eventos.init();
